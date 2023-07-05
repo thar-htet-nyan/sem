@@ -1,4 +1,4 @@
 FROM openjdk:latest
+COPY ./target/seMethods-1.0.0.1-jar-with-dependencies.jar /tmp
 WORKDIR /tmp
-COPY ./target/classes/com /tmp/com
-ENTRYPOINT ["java", "com.napier.sem.App"]
+ENTRYPOINT ["java", "-jar", "seMethods-1.0.0.1-jar-with-dependencies.jar"]
